@@ -137,3 +137,23 @@ console.log(`おすすめメニューはこちら`);
 for (let i = 0; i < cafe.menus.length; i ++){
     console.log(cafe.menus[i]);//"コーヒー","紅茶","緑茶"
 }
+
+//関数
+const introduce = function(){
+    console.log("呼び出し");
+};
+introduce();//関数の呼び出し
+
+//引数
+const introduces = (name,age)=>{
+    console.log(`私は${name}です`);//引数は関数の中で定数のように扱える
+    console.log(`私は${age}歳です`);//
+};
+introduces("花子",14);//私は花子です 私は14歳です
+
+//応用
+const toMinutes = (hour,minutes)=>{
+    return hour * 60 + minutes;//1時間を60分に直す
+}
+const result = toMinutes(1,45);//1時間45分を分に換算する
+console.log(`${result}分`)//105分
