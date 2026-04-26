@@ -157,3 +157,50 @@ const toMinutes = (hour,minutes)=>{
 }
 const result = toMinutes(1,45);//1時間45分を分に換算する
 console.log(`${result}分`)//105分
+
+//クラス
+class Animal{
+    constructor(name,age){//コンストラクタ
+        this.name = name;
+        this.age = age;
+    }
+    greet(){//メソッド
+        console.log("こんにちは");
+    }
+    info(){
+        this.greet();
+        console.log(`名前は${this.name}です`);//コンストラクタで設定した値が使える
+        console.log(`${this.age}歳です`);
+    }
+}
+const animal = new Animal("レオ",3);//インスタンス
+animal.info();
+
+//継承　メソッド
+class Animald {
+    constructor(age){
+        this.age = age;
+    }
+}
+
+class Dogds extends Animald{ //AnimaldからDogdsに継承
+    constructor(age,breed){ //オーバーライド
+        super(age); //1行目にコンストラクタをオーバーライドする際必要
+        this.breed = breed; //子クラス独自の処理実行
+    }
+    info(){
+        console.log(`犬種は${this.breed}です`); //犬種はシベリアンハスキーです
+        const humanAge = dogds.getHumanAge(); //メソッドの戻り値を代入
+        console.log(`人間年齢で${humanAge}歳です`); //人間年齢で16歳です
+    }
+    getHumanAge(){
+        return this.age * 8; //メソッドの定義 ×８
+    }
+}
+
+const dogds = new Dogds(2,"シベリアンハスキー");
+dogds.info();
+
+
+
+
