@@ -1,3 +1,9 @@
+// import rip from "./rip";//rip.jsで定義されたクラスが使用可能
+
+
+
+
+
 console.log("Hello world"); //「Hello World]が出力される
 console.log(20+26);//「46」が出力される
 console.log("20"+"26");//「2026」が出力される
@@ -202,5 +208,9 @@ const dogds = new Dogds(2,"シベリアンハスキー");
 dogds.info();
 
 
+// export default script;//scriptクラスを他のファイルでも使用できるようにする設定
 
+const cat1 = new Cat("ライ",5);
+const cat2 = new Cat("リク",9);
 
+export{cat1,cat2};
